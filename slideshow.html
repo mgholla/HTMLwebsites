@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mushroom Slideshow</title>
+        <style>
+            
+            body {
+                background-color: blue;
+            }
+            
+            img {
+                border-style: solid;
+                border-width: 10px;
+                border-color: orange;
+            }
+            
+            button {
+                border-style: solid;
+                border-width: 10px;
+            }
+            
+        </style>
+    </head>
+    <body>
+    
+    <br>
+    
+    <div>
+        <img src="https://www.kasandbox.org/programming-images/food/mushroom.png" height="200" id = "image1">
+    </div>
+    
+    <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Amanita_muscaria_%28fly_agaric%29.JPG/800px-Amanita_muscaria_%28fly_agaric%29.JPG" height="200" id = "image2">
+    </div>
+    
+    <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Lactarius_indigo_48568.jpg" height = "200" id = "image3">
+    </div>
+    
+    <button type="button" id = "nextButton">Next</button>
+    <button type="button" id = "prevButton">Prev</button>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    
+    var slideCount = 1;
+    console.log(slideCount);
+    $("#image1").hide();
+    $("#image2").hide();
+    $("#image3").hide();
+    
+    $("#nextButton").on("click", function(){
+        
+        if (slideCount === 1) {
+            $("#image3").hide();
+            $("#image1").fadeIn (300);
+            slideCount ++;
+            console.log(slideCount);
+        } else if (slideCount === 2) {
+            $("#image1").hide();
+            $("#image2").fadeIn(300);
+            slideCount ++;
+            console.log(slideCount);
+        } else if (slideCount === 3) {
+            $("#image2").hide();
+            $("#image3").fadeIn(300);
+            slideCount ++;
+            console.log(slideCount);
+        } else {
+            slideCount = 1;
+            console.log(slideCount);
+        }
+        
+    });
+    
+    $("#prevButton").on("click", function() {
+        
+        if (slideCount === 1) {
+            $("#image3").hide();
+            $("#image2").fadeIn();
+            slideCount = 3;
+            console.log(slideCount);
+        } else if (slideCount === 2) {
+            $("#image1").hide();
+            $("#image3").fadeIn();
+            slideCount --;
+            console.log(slideCount);
+        } else if (slideCount === 3) {
+            $("#image2").hide();
+            $("#image1").fadeIn();
+            slideCount --;
+            console.log(slideCount);
+        } else {
+            
+        }
+        
+    });
+    
+    </script> 
+    </body>
+</html>
