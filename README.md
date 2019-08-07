@@ -5,5 +5,5 @@
 
 # Table of Contents
 
-1. *Mushroom Slideshow*
-2. *Word Game*
+1. [*Mushroom Slideshow*](file:///Users/mayank.holla/Downloads/HTMLwebsites-master/slideshow.html)
+2. [*Word Game*](file:///Users/mayank.holla/Downloads/wordGame-master/index.html)
