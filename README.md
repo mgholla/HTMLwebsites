@@ -5,5 +5,5 @@
 
 # Table of Contents
 
-1. Mushroom Slideshow
-2. Word Game
+1. *Mushroom Slideshow*
+2. *Word Game*
