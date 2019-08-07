@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Scene change</title>
+        <style>
+        #leafers {
+            position: absolute;
+            top: 210px;
+            left: 378px;
+        }
+            
+        </style>
+    </head>
+    <body>
+    
+    
+    <img src="https://www.kasandbox.org/programming-images/landscapes/beach-with-palm-trees.png" id="scene">
+
+    <img src="https://www.kasandbox.org/programming-images/avatars/leafers-seedling.png" id="leafers">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $("#scene").on("click", function(event) {
+            var $planet = $("<img>")
+                .attr("src", "https://www.kasandbox.org/programming-images/space/planet.png")
+                .attr("id", "planet")
+                .css("position", "absolute")
+                .css("top", "1" + "px")
+                .css("left", "1" + "px")
+                .appendTo("body");
+        });
+    
+    
+        $("#leafers").on("click", function(event) {
+            var $boom = $("<img>")
+                .attr("src", "https://www.kasandbox.org/programming-images/avatars/starky-seedling.png")
+                .css("position", "absolute")
+                .css("top", "210" + "px")
+                .css("left", "378" + "px")
+                .appendTo("body");
+        });
+        
+        $("body").on("click", function(event) {
+           var $rocket = $("<img>")
+                .attr("src", "https://www.kasandbox.org/programming-images/space/rocketship.png")
+                .css("position", "absolute")
+                .css("top", "95" + "px")
+                .css("left", "188" + "px")
+                .appendTo("body");
+        });
+    </script>
+    </body>
+</html>
